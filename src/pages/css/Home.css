@@ -1,0 +1,134 @@
+.home {
+  padding-top: 3rem;
+}
+.home .btn-filters {
+  text-align: right;
+  padding: 0 1rem;
+  display: none;
+}
+.home .card-container {
+  flex-grow: 1;
+}
+.home .main {
+  position: relative;
+  display: flex;
+}
+
+.home .filters {
+  padding: 1rem;
+  width: 200px;
+}
+.home .x {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-weight: bold;
+  display: none;
+}
+.home .filters button {
+  font-size: 14px;
+}
+.home .filters .price,
+.home .filters .price .frm-price,
+.home .filters .categories,
+.home .filters .categories ul,
+.home .filters .order,
+.home .filters .order ul {
+  padding: 0.5rem;
+}
+.home .filters .price .frm-price {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.home .filters .price .frm-price input {
+  padding: 0.4em;
+}
+.home .filters .categories li {
+  padding: 1px 0;
+}
+.home .filters .categories li:hover {
+  list-style: circle;
+  cursor: pointer;
+}
+.home .filters .order ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input {
+  /*Variables*/
+  --width-input: 600px;
+  --height-input: 2.5rem;
+  --bg-button: #2b2a2a;
+
+  width: fit-content;
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+}
+.input input {
+  height: var(--height-input);
+  width: var(--width-input);
+  border-radius: var(--height-input);
+  border: 1px solid gray;
+  padding-left: 1rem;
+  font-size: calc(var(--height-input) / 2);
+}
+.input input:focus {
+  outline: none;
+}
+.input button {
+  height: var(--height-input);
+  width: var(--height-input);
+  border: 1px solid gray;
+  border-bottom-right-radius: 50%;
+  border-top-right-radius: 50%;
+  background-color: var(--bg-button);
+  position: absolute;
+  right: 0;
+}
+.input .bx-search-alt-2 {
+  font-size: calc(var(--height-input) / 1.5);
+  color: whitesmoke;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 900px) {
+  .home {
+    padding-top: 1.5rem;
+  }
+  .input {
+    margin-bottom: 1.5rem;
+  }
+  .input input {
+    width: 300px;
+  }
+  .home .filters .x {
+    display: block;
+  }
+  .home .btn-filters {
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+  .home .filters {
+    position: fixed;
+    z-index: 90;
+    background-color: #242424;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display: none;
+  }
+  .home .filters.show {
+    transition: display 1s;
+    display: block;
+  }
+}

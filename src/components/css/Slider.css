@@ -1,0 +1,39 @@
+/*slider*/
+.slider {
+  width: 370px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.slider .static {
+  overflow: hidden;
+}
+.slider .move {
+  display: flex;
+  transition: transform 500ms ease;
+}
+.slider .img-primary {
+  background-color: #2b2a2a;
+  min-width: 370px;
+  max-width: 400px;
+  height: 350px;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+.slider .imgs-list-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.slider .img-item {
+  width: 70px;
+  height: 70px;
+  padding: 0.4rem;
+  border: 3px solid #272626;
+  border-radius: 0.5rem;
+  transition: border 200ms ease;
+}
+.slider .img-item:hover {
+  cursor: pointer;
+  border: 3px solid #3f3e3e;
+}
